@@ -1,4 +1,5 @@
 # Milestone_Prooject_2
+
 this is our group milestone project
 
 We are creating a math quiz that has 10 questions with a highscore of correct answers out of the total and how fast it can be completed.
@@ -15,14 +16,10 @@ We are creating a math quiz that has 10 questions with a highscore of correct an
         -Start Button
     -How to Play (link to --> )
         -Description Button
-    
-    
     -(Extra)
         -Different genres of quizzes
             -History
             -English
-    
-
 2. Make skeleton of back-end
     -Leaderboard Memory
         -Scores
@@ -36,13 +33,10 @@ We are creating a math quiz that has 10 questions with a highscore of correct an
         -Questions in an array
         -Compare answer to selected answer
         -Determine if true/false
-    
 3. Use a database table for the Leaderboard
     -Utilize back-end Leaderboard skeleton for this
     -See if the order matches with times, correct answers, and users in table
     -Make sure it populates on main page
-
-
 Tasks ---> Day 0
     -Set up project skeleton's skeleton
     -Set up tasks
@@ -69,10 +63,6 @@ Tasks ---> Day 2 (once Day 1 is over)
         -Maybe work on the memory and how the Leaderboard retains information
     -Twedty
         -Compare and Contrast right and wrong answers
-
-
-
-
 COMPLETED TASKS (WRITE NAME WHEN COMPLETED)
     -Leaderboard
         -Does it populate?
