@@ -1,3 +1,5 @@
+import React, { useState, useEffect } from 'react';
+
 const questions = [
     { id: 'q1', text: 'What is 2+2?', 
         possible: [
@@ -69,14 +71,109 @@ const questions = [
             {id: 'c', text: '$1533'},
             {id: 'd', text: '$1953'}],
         answer: 'c' },
-    { id: 'q11', text: '', possible: '', answer: '' },
-    { id: 'q12', text: '', possible: '', answer: '' },
-    { id: 'q13', text: '', possible: '', answer: '' },
-    { id: 'q14', text: '', possible: '', answer: '' },
-    { id: 'q15', text: '', possible: '', answer: '' },
-    { id: 'q16', text: '', possible: '', answer: '' },
-    { id: 'q17', text: '', possible: '', answer: '' },
-    { id: 'q18', text: '', possible: '', answer: '' },
-    { id: 'q19', text: '', possible: '', answer: '' },
-    { id: 'q20', text: '', possible: '', answer: '' },
-]
+    { id: 'q11', text: 'What is 92+8? Then divided by 2? And then multiplied by 3?', 
+        possible: [
+            {id: 'a', text: '100'},
+            {id: 'b', text: '200'},
+            {id: 'c', text: '50'},
+            {id: 'd', text: '150'},
+        ], answer: 'd' },
+    { id: 'q12', text: 'Alice was born in March of 1982. During her education she was held back by 2 grades. After her highschool graduation she started on a 13 year college course for being a doctor. At what year would she have graduated from college if the average graduate from high school is between 17 and 18 depending on the year they were born? (before or after January 1st)',
+    possible: [
+        {id: 'a', text: '2013'},
+        {id: 'b', text: '2014'},
+        {id: 'c', text: '2016'},
+        {id: 'd', text: '2015'},
+    ], answer: 'd' },
+    { id: 'q13', text: 'What is the average number (rounded down) between this array of 11 numbers? "15, 20, 8, 100, 1500, 327, 9, 5, -20, -1000, and 277', 
+    possible: [
+        {id: 'a', text: '112'},
+        {id: 'b', text: '124'},
+        {id: 'c', text: '212'},
+        {id: 'd', text: '224'},
+    ], answer: 'a' },,
+    { id: 'q14', text: 'What is 2+2x5?',
+    possible: [
+        {id: 'a', text: '20'},
+        {id: 'b', text: '10'},
+        {id: 'c', text: '12'},
+        {id: 'd', text: '5'},
+    ], answer: 'c' },
+    { id: 'q15', text: 'What is 4/2+5x3?', 
+    possible: [
+        {id: 'a', text: '21'},
+        {id: 'b', text: '17'},
+        {id: 'c', text: '20'},
+        {id: 'd', text: '18'},
+    ], answer: 'b' },,
+    { id: 'q16', text: 'Jade requires every item in her household to be pink. However, she only has a small budget of $10,000 to do so. If she has 126 items left to replace as pink, what would the average price be of each item for her to be able to accomplish her goals? (rounded down)', 
+    possible: [
+        {id: 'a', text: '$79'},
+        {id: 'b', text: '$100'},
+        {id: 'c', text: '$63'},
+        {id: 'd', text: '$129'},
+    ], answer: 'a' },
+    { id: 'q17', text: 'Ray has suddenly decided that all he wanted to eat for the next 90 days was ONLY ramen. However, he wanted to mix it up and switch between 3 flavors every day. If the flavor of shrimp costs $.90, beef at $.50, and chicken is priced at $1.20, how much would he have to spend to eat ramen for 3 meals a day for 90 days?',
+    possible: [
+        {id: 'a', text: '$324'},
+        {id: 'b', text: '$423'},
+        {id: 'c', text: '$342'},
+        {id: 'd', text: '$234'},
+    ], answer: 'd' },
+    { id: 'q18', text: 'What is the square root of 64?', 
+    possible: [
+        {id: 'a', text: '8'},
+        {id: 'b', text: '6'},
+        {id: 'c', text: '4'},
+        {id: 'd', text: '2'},
+    ], answer: 'a' },
+    { id: 'q19', text: 'If Chuck can memorize 1000 words in a minute and a book contains 150 words per page, how long would it take for Chuck to memorize a book with 275 pages?', 
+    possible: [
+        {id: 'a', text: '61 minutes'},
+        {id: 'b', text: '31 minutes'},
+        {id: 'c', text: '41 minutes'},
+        {id: 'd', text: '51 minutes'},
+    ], answer: 'c' },
+    { id: 'q20', text: 'A group of bodybuilders are trying to lift up an object that weighs 2,350 pounds. If each bodybuilder can lift around 180 pounds, how many would it take to lift up the object?', 
+    possible: [
+        {id: 'a', text: '12'},
+        {id: 'b', text: '12.5'},
+        {id: 'c', text: '13'},
+        {id: 'd', text: '13.5'},
+    ], answer: 'c' },
+];
+
+// Fisher-Yates shuffle algorithm
+const shuffleArray = (array) => {
+    for (let i = array.length - 1; i > 0; i--) {
+        const j = Math.floor(Math.random() * (i + 1));
+        [array[i], array[j]] = [array[j], array[i]];
+    }
+    return array;
+};
+
+const QuizApp = () => {
+    const [shuffledQuestions, setShuffledQuestions] = useState([]);
+
+    useEffect(() => {
+        const shuffled = shuffleArray([...questions]);
+        setShuffledQuestions(shuffled.slice(0, 10));
+    }, []);
+
+    return (
+        <div>
+            {shuffledQuestions.map((question) => (
+                <div key={question.id}>
+                    <h3>{question.text}</h3>
+                    <ul>
+                        {question.possible.map((option) => (
+                            <li key={option.id}>{option.text}</li>
+                        ))}
+                    </ul>
+                </div>
+            ))}
+        </div>
+    );
+};
+
+export default QuizApp;
