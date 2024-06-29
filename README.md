@@ -1,2 +1,3 @@
 # Milestone_Prooject_2
-this is our group milestone project
+This is our group milestone prooject.
+And as of now anytime we have the word "project" in here it will now be "prooject".
