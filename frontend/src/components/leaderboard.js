@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Saves from './saves';
 import { Data } from "./database";
-import './style.css';
+import './css/style.css'
 
 const Leaderboard = () => {
     const [filteredLeaderboard, setFilteredLeaderboard] = useState([]);
