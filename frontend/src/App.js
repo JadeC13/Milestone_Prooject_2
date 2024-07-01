@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import './components/css/home.css'
 
 const HomePage = () => {
@@ -8,7 +8,7 @@ const HomePage = () => {
             {/* below directs people to the leaderboard */}
             <ul>
                 <li>Click <a href='/leaderboard'>HERE </a>to view our leaderboard!</li>
-                <li>Click <a>HERE </a>to test your knowledge!</li>
+                <li>Click <a href='/frontend/src/components/questions.js'>HERE </a>to test your knowledge!</li>
             </ul>
             <div className='Leaderboard' id='main'>
             </div>
