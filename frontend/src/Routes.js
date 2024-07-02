@@ -22,6 +22,5 @@ export const Routes = () => {
                 </Route>
             </Switch>
         </Router>
-        // This code is the router just shows how we can navigate to the Leaderboard and the HomePage
     )
 }

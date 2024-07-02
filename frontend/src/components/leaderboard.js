@@ -1,6 +1,5 @@
-import React, { useState } from "react";
-import Saves from './saves';
-import { Data } from "./database";
+import React, { useState, useContext } from "react";
+import { QuizContext } from './QuizContext';
 import './css/style.css'
 import BackButton from "./backbutton";
 
@@ -17,11 +16,11 @@ const Leaderboard = () => {
             const top20 = sortedResults.slice(0, 20);
             setFilteredLeaderboard(top20);
         }
-    }
+    };
 
     return (
         <div className="board">
-            <BackButton/> {}
+            <BackButton />
             <h1 className="leaderboard">Leaderboard</h1>
             <div className="duration">
                 <button onClick={() => handleClick('top-10')}>Top 10</button>
@@ -46,16 +45,6 @@ const Leaderboard = () => {
             </div>
         </div>
     );
-}
+};
 
 export default Leaderboard;
-
-function between(filter) {
-    return filter.sort((a, b) => {
-        if (a.score === b.score) {
-            return b.score - a.score;
-        } else {
-            return b.score - a.score;
-        }
-    })
-}
