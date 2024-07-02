@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import Saves from './saves';
 import { Data } from "./database";
 import './css/style.css'
+import BackButton from "./backbutton";
+
 
 const Leaderboard = () => {
     const [filteredLeaderboard, setFilteredLeaderboard] = useState([]);
@@ -16,9 +18,11 @@ const Leaderboard = () => {
             setFilteredLeaderboard(top20);
         }
     }
+    // This code above sorts out the scores and places them in a list of either top 10 or top 20
 
     return (
         <div className="board">
+            <BackButton/> {}
             <h1 className="leaderboard">Leaderboard</h1>
 
             <div className="duration">
@@ -30,11 +34,11 @@ const Leaderboard = () => {
         </div>
     );
 }
+// This code above lets you interact with the top 10 and top 20 buttons
+
+
 
 export default Leaderboard;
-
-
-
 
 function between(filter) {
     return filter.sort((a, b) => {
