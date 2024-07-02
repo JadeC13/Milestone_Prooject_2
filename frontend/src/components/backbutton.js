@@ -9,7 +9,7 @@ const BackButton = () => {
     };
 
     return (
-        <button className="back-button" onClick={goBack}>Back</button>
+        <button className="back-button" onClick={goBack}>Home</button>
     );
 };
 // This code above lets you use the back button to return to the Home Page
