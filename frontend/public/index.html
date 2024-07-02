@@ -13,7 +13,11 @@
 <body>
     <div id="root"></div>
     <!-- code below adds bg music to every route -->
-    <audio id="bg_music" src="/sounds/happy.mp3" volume="0.2" controls></audio>
+    <!-- <audio id="bg_music" src="/sounds/happy.mp3" volume="0.2" controls></audio> -->
+    <audio id="bg_music" src="/sounds/happy.mp3" autoplay></audio>
+    <img src="./images/speakerON.png" alt="pixel speaker" onclick="document.getElementById('bg_music').play(); return false;" />
+    <img src="./images/speakerOFF.png" alt="pixel speaker off" onclick="document.getElementById('bg_music').pause(); return false;" />
 </body>
 
 </html>
+
