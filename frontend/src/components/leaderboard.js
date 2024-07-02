@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Saves from './saves';
 import { Data } from "./database";
 import './css/style.css'
-import BackButton from "./backbutton";
+import BackButton from "./backbutton"
 
 
 const Leaderboard = () => {
