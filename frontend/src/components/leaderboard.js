@@ -17,6 +17,7 @@ const Leaderboard = () => {
             const top20 = sortedResults.slice(0, 20);
             setFilteredLeaderboard(top20);
         }
+    }
 
     return (
         <div className="board">
@@ -45,6 +46,7 @@ const Leaderboard = () => {
             </div>
         </div>
     );
+}
 
 export default Leaderboard;
 
