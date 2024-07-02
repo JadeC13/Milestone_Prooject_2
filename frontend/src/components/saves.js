@@ -8,6 +8,7 @@ export default function saves({ Leaderboard }) {
     )
 };
 
+
 function item(data) {
     return (
 
@@ -15,15 +16,16 @@ function item(data) {
             {
                 data.map((value, index) => (
                     <div className="flex" key={index}>
-                        <div className="item">
+                        <div className="item left">
                             <div className="info">
-                                <h3 className='name text-dark'>{value.name}</h3>
+                                <h3 className="name text-dark">{index + 1}. {value.name}</h3>
                             </div>
                         </div>
-                        <div className="item">
+                        <div className="item right">
                             <span>{value.score}</span>
                         </div>
                     </div>
+                    // The code above shows the names and scores in the leaderboard and shows their placement in the leaderboard too
                 )
                 )
             }
