@@ -1,7 +1,8 @@
-import { BrowserRouter as Router, Switch, Route} from 'react-router-dom'
-import Board from './components/leaderboard';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import Leaderboard from './components/leaderboard';
 import HomePage from './App';
 import QuizApp from './components/questions';
+import Summary from './components/Summary';
 
 export const Routes = () => {
     return (
@@ -11,10 +12,13 @@ export const Routes = () => {
                     <HomePage />
                 </Route>
                 <Route path='/leaderboard'>
-                    <Board />
+                    <Leaderboard />
                 </Route>
                 <Route path='/frontend/src/components/questions.js'>
                     <QuizApp />
+                </Route>
+                <Route path='/summary'>
+                    <Summary />
                 </Route>
             </Switch>
         </Router>
