@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from 'react';
-import { questions } from "./database"
-import './css/style.css'
+import React, { useState, useEffect, useContext } from 'react';
+import { useHistory } from 'react-router-dom';
+import { questions } from "./database";
+import { QuizContext } from './QuizContext';
+import './css/style.css';
 
-// Fisher-Yates shuffle algorithm
 const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
@@ -11,27 +12,26 @@ const shuffleArray = (array) => {
     return array;
 };
 
-//Gets shuffled questions and utilizes the answers from selected possible answers
 const QuizApp = () => {
     const [shuffledQuestions, setShuffledQuestions] = useState([]);
     const [userAnswers, setUserAnswers] = useState({});
     const [time, setTime] = useState(0);
+    const { addResult } = useContext(QuizContext);
+    const history = useHistory();
 
-    //Only allows 10 out of (x) to appear.
     useEffect(() => {
         const shuffled = shuffleArray([...questions]);
         setShuffledQuestions(shuffled.slice(0, 10));
     }, []);
 
-    // Timer logic
     useEffect(() => {
         const timer = setInterval(() => {
             setTime(prevTime => prevTime + 1);
         }, 1000);
 
-        return () => clearInterval(timer); // Cleanup interval on component unmount
+        return () => clearInterval(timer);
     }, []);
-    
+
     const handleAnswerChange = (questionId, answerId) => {
         setUserAnswers({
             ...userAnswers,
@@ -39,7 +39,6 @@ const QuizApp = () => {
         });
     };
 
-    //Sums up total correct answers
     const handleSubmit = (e) => {
         e.preventDefault();
         let correctAnswers = 0;
@@ -48,10 +47,16 @@ const QuizApp = () => {
                 correctAnswers += 1;
             }
         });
-        alert(`You got ${correctAnswers} out of 10 questions correct!`);
+
+        const result = {
+            correctAnswers,
+            time
+        };
+
+        addResult(result);
+        history.push('/summary', result);
     };
 
-    // Format time in minutes and seconds
     const formatTime = (seconds) => {
         const minutes = Math.floor(seconds / 60);
         const remainingSeconds = seconds % 60;
