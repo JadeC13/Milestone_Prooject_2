@@ -1,3 +1,28 @@
 body {
+    text-align: center;
     background-color: hotpink;
-}
+    background-image: url("../../../public/images/9316762.jpg");
+    background-size: cover;
+    }
+
+    .mainBody {
+        text-align: center;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 10em;
+        width: 40em;
+        height: 20em;
+        background-color: white;
+    }
+
+    .mainBody h1 {
+        font-family: "pixelify Sans", sans-serif;
+    }
+
+    .mainBody ul {
+        list-style: none;
+    }
+
+    .mainBody li {
+        margin-left: -2em;
+    }

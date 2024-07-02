@@ -1,11 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-// import App from './App';
 import { Routes } from './Routes';
+import { QuizProvider } from './components/QuizContext';
 
 ReactDOM.render(
     <React.StrictMode>
-        <Routes />
+        <QuizProvider>
+            <Routes />
+        </QuizProvider>
     </React.StrictMode>,
     document.getElementById('root')
 );
