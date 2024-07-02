@@ -9,8 +9,8 @@ const HomePage = () => {
             <h1>Welcome to our quiz game! title is tbd</h1>
             {/* below directs people to the leaderboard */}
             <ul>
-                <li>Click <a href='/leaderboard'>HERE </a>to view our leaderboard!</li>
-                <li>Click <a href='/frontend/src/components/questions.js'>HERE </a>to test your knowledge!</li>
+                <li><a href='/leaderboard'>view our leaderboard!</a></li>
+                <li><a href='/frontend/src/components/questions.js'>take our quiz!</a></li>
             </ul>
             {/* <audio id="bg_music" src="/sounds/happy.mp3" volume="0.2" controls></audio> */}
             {/* <div className='Leaderboard' id='main'>
