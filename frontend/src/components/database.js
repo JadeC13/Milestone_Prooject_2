@@ -60,5 +60,6 @@ const Data = [
     { name: "Gemma", score: 19 },
     { name: "Hugo", score: 20 },
 ];
+// The code above shows the data base of all the saves we have in the quiz for the leaderboard
 
 export { Data };
