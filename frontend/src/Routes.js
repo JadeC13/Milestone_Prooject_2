@@ -14,7 +14,7 @@ export const Routes = () => {
                 <Route path='/leaderboard'>
                     <Leaderboard />
                 </Route>
-                <Route path='/frontend/src/components/questions.js'>
+                <Route path='/easy quiz'>
                     <QuizApp />
                 </Route>
                 <Route path='/summary'>
