@@ -7,16 +7,17 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-    <title>Quiz!</title>
+    <title>Mathlympics</title>
 </head>
 
 <body>
     <div id="root"></div>
+    <!-- code bellow adds an animated background to each page -->
+    <video autoplay muted loop src="./images/AdobeStock_497265450.mov"></video>
     <!-- code below adds bg music to every route -->
-    <!-- <audio id="bg_music" src="/sounds/happy.mp3" volume="0.2" controls></audio> -->
     <audio id="bg_music" src="/sounds/happy.mp3" autoplay></audio>
-    <img src="./images/speakerON.png" alt="pixel speaker" onclick="document.getElementById('bg_music').play(); return false;" />
-    <img src="./images/speakerOFF.png" alt="pixel speaker off" onclick="document.getElementById('bg_music').pause(); return false;" />
+    <img class="speakerON" src="./images/speakerON.png" alt="pixel speaker" onclick="document.getElementById('bg_music').play(); return false;" />
+    <img class="speakerOFF" src="./images/speakerOFF.png" alt="pixel speaker off" onclick="document.getElementById('bg_music').pause(); return false;" />
 </body>
 
 </html>

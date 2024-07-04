@@ -2,7 +2,7 @@ import React, { useState, useEffect, useContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { questions } from "./database";
 import { QuizContext } from './QuizContext';
-import './css/style.css';
+import './css/quiz.css';
 
 const shuffleArray = (array) => {
     for (let i = array.length - 1; i > 0; i--) {
@@ -64,7 +64,7 @@ const QuizApp = () => {
     };
 
     return (
-        <div>
+        <div className='quizBody'>
             <div className="header">
                 <h2>Quiz Questions</h2>
                 <div className="timer">Time: {formatTime(time)}</div>
