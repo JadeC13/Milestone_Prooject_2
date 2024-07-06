@@ -1,6 +1,14 @@
-Added QuizContext.js
-updated index.js
-updated questions.js
-added Summary.js
-updated routes.js
-updated leaderboard.js
+What I'm going to do on Saturday--
+
+1. Connect to mongo
+2. Update a database
+3. Create tables for question difficulties
+4. Add the questions and possible answers to those tables
+5. See if I can push and pull from those questions when accessing a different difficulty
+6. Test if they can compare the answers correctly
+7. See if they can push to a leaderboard
+    a. Make correctAnswers > time
+    b. Else if time > correctAnswers===correctAnswers
+8. See if leaderboard keeps the data when refreshing
+9. Test times and correctAnswers to see if a name can be pushed down/updated
+10. If everything works rename leaderboard results as: ({name} answered {number} out of 10 questions correctly with a time of {time}!)
