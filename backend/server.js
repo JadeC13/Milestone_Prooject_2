@@ -90,7 +90,7 @@ const client = new MongoClient(url, { useNewUrlParser: true, useUnifiedTopology:
 
 // Database and Collection
 const dbName = 'leaderboard';
-const collectionName = 'leaderboard';
+const collectionName = 'questions';
 
 async function run() {
     try {
