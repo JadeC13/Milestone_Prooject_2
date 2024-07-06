@@ -1,4 +1,58 @@
 .quizBody {
     background-color: hotpink;
+    color: purple;
     width: 30em;
+    height: 60em;
+    overflow-y: scroll;
+    margin: auto;
+    margin-top: 3em;
+    border: 1px solid lime;
+    border-radius: 50px;
+    padding: 0.5em 1em;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: transparent transparent; /* Firefox */
+}
+
+/* Scrollbar styles for WebKit browsers (Chrome, Safari) */
+.quizBody::-webkit-scrollbar {
+    width: 8px; /* Adjust the width to make it smaller */
+}
+
+.quizBody::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0); /* Transparent background */
+    border-radius: 50px; /* Match the border radius of the container */
+}
+
+.quizBody::-webkit-scrollbar-thumb {
+    background: rgba(136, 136, 136, 0.5); /* Semi-transparent thumb */
+    border-radius: 50px; /* Match the border radius of the container */
+    height: 20px; /* Adjust the height to make it smaller */
+}
+
+.summary {
+    background-color: hotpink;
+    color: lime;
+    width: 30em;
+    margin: auto;
+    margin-top: 10em;
+    border: 1px solid lime;
+    border-radius: 50px;
+    padding: 0.5em 1em;
+    font-size: 30px;
+}
+
+.button {
+    background-color: lime;
+    color: hotpink;
+    border-color: hotpink;
+}
+
+.button:hover {
+    background-color: hotpink;
+    color: lime;
+    border-color: lime;
+}
+
+ul {
+    list-style-type: none;
 }

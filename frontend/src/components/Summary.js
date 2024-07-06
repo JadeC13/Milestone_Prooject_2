@@ -11,11 +11,11 @@ const Summary = () => {
     };
 
     return (
-        <div>
-            <h2>Quiz Summary</h2>
+        <div className='summary'>
+            <h2>Here are your Results!</h2>
             <p>You got {correctAnswers} out of 10 questions correct!</p>
-            <p>Time taken: {`${Math.floor(time / 60)}:${time % 60 < 10 ? '0' : ''}${time % 60}`}</p>
-            <button onClick={handleOkClick}>OK</button>
+            <p>Time taken to complete quiz: {`${Math.floor(time / 60)}:${time % 60 < 10 ? '0' : ''}${time % 60}`}</p>
+            <button className='button' onClick={handleOkClick}>OK</button>
         </div>
     );
 };
