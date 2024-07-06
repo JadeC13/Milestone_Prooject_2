@@ -67,8 +67,8 @@ app.post('/results', async (req, res) => {
 
 app.get('/leaderboard', async (req, res) => {
     try {
-        const results = await Result.find().sort({ correctAnswers: -1, time: 1 }).limit(20);
-        res.json(results);
+        const leaderboard = await Result.find().sort({ correctAnswers: -1, time: 1 }).limit(20);
+        res.json(leader);
     } catch (err) {
         res.status(500).send(err);
     }
