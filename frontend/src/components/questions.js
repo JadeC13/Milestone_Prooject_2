@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 import { questions } from "./database";
 import { QuizContext } from './QuizContext';
 import './css/quiz.css';
-import BackButton from './backbutton';
+
 
 //Shuffles the questions array
 const shuffleArray = (array) => {
