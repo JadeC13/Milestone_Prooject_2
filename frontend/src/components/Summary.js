@@ -1,5 +1,6 @@
 import React from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
+import './css/summary.css'
 
 const Summary = () => {
     const history = useHistory();

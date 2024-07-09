@@ -1,13 +1,15 @@
 .quizBody {
-    background-color: hotpink;
-    color: purple;
-    width: 30em;
-    height: 60em;
+    background-color: black;
+    color: lime;
+    width: 40em;
+    height: 30em;
     overflow-y: scroll;
     margin: auto;
     margin-top: 3em;
-    border: 1px solid lime;
-    border-radius: 50px;
+    border-style: solid;
+    border-color: hotpink;
+    border-width: .4em;
+    border-radius: 10%;
     padding: 0.5em 1em;
     scrollbar-width: thin; /* Firefox */
     scrollbar-color: transparent transparent; /* Firefox */
@@ -42,6 +44,7 @@
 }
 
 .button {
+    margin-left: 1em;
     background-color: lime;
     color: hotpink;
     border-color: hotpink;
@@ -53,6 +56,23 @@
     border-color: lime;
 }
 
-ul {
+.quizBody ul {
     list-style-type: none;
+}
+
+label:hover {
+    color: hotpink;
+}
+
+.quizBody input {
+    color: hotpink;
+}
+
+.quizBody div {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+.quizBody h3 {
+    margin-top: .5em;
+    margin-bottom: .5em;
 }
