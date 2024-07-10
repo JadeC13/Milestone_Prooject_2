@@ -8,13 +8,15 @@ router.get("/", async (req, res) => {
     });
 });
 
-router.post("/"),
-    async (req, res) => {
-        console.log(req.body);
-        try {
-        await db.Leaderboard.create(req.body);
-        } catch (err) {
+
+router.post("/", async (req, res) => {
+    console.log(req.body);
+    try {
+        const newEntry = await db.Leaderboard.create(req.body);
+        res.status(201).json(newEntry);
+    } catch (err) {
+        res.status(400).json({ error: "Bad Request" });
         console.log(err);
-        }
-    };
+    }
+});
 module.exports = router;

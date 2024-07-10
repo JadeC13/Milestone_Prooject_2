@@ -73,6 +73,7 @@ const QuizApp = () => {
         return `${minutes}:${remainingSeconds < 10 ? '0' : ''}${remainingSeconds}`;
     };
 
+    
     //Allows to go home instead of submit
     const handleHomeClick = () => {
         history.push('/')
