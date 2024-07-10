@@ -8,6 +8,7 @@ router.get("/", async (req, res) => {
     });
 });
 
+
 router.post("/", async (req, res) => {
     console.log(req.body);
     try {
@@ -18,5 +19,4 @@ router.post("/", async (req, res) => {
         console.log(err);
     }
 });
-
 module.exports = router;

@@ -4,7 +4,6 @@ import { Data } from "./database";
 import './css/style.css'
 import BackButton from "./backbutton"
 
-
 const Leaderboard = () => {
     const [filteredLeaderboard, setFilteredLeaderboard] = useState([]);
 
